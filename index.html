@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FIRST_JS_PROJECT</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>Your Expenses</h1>
+    <div class = 'expense_div'>
+        <form class = 'expense_form'>
+            <label for="expense_amount">Expense Amount : </label>
+            <input type="number" class = 'expense_amount' name = 'expense_amount' min="0" step="100" value="0">
+            <label for="expense_type">Expense Type :</label>
+            <select name="expense_type" id="expense_type">
+                <option value="Entertainment">Entertainment</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Food">Food</option>
+            </select>
+            <label for="description">Description :</label>
+            <input type="text" class="description" name="description">
+            <input type="submit" class = "add_expense" value="Add Expense">
+        </form>
+    </div>
+
+    <ul class="expense_list"></ul>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
